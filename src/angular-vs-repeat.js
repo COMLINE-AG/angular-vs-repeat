@@ -381,8 +381,6 @@
                             }
                         }
 
-                        $scrollParent.on('scroll', scrollHandler);
-
                         function onWindowResize() {
                             if (typeof $attrs.vsAutoresize !== 'undefined') {
                                 autoSize = true;
@@ -474,6 +472,10 @@
                                 reinitOnClientHeightChange();
                             }
                         });
+                        
+                        $scope.$on('scrollEvent', function () {
+							scrollHandler();
+						});
 
                         function updateInnerCollection() {
                             var $scrollPosition = getScrollPos($scrollParent[0], scrollPos);
