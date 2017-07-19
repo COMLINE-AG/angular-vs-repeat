@@ -474,8 +474,8 @@
 							}
 						});
 
-						$scope.$on('scrollEvent', function (evt, groupId) {
-							if ($attrs.groupId === groupId) {
+						$scope.$on('scrollEvent', function (evt, repeatId) {
+							if ($attrs.repeatId === repeatId) {
 								scrollHandler();
 							}
 						});
