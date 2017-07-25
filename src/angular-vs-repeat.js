@@ -474,7 +474,7 @@
 							}
 						});
 
-						$scope.$on('scrollEvent', function (evt, repeatId) {
+						$scope.$root.$on('scrollEvent', function (evt, repeatId) {
 							if ($attrs.repeatId === repeatId) {
 								scrollHandler();
 							}
